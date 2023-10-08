@@ -63,3 +63,5 @@ nmap <leader>fb :ls<CR>:b<space>
 nmap <leader>n :noh<CR>
 vmap > >gv
 vmap < <gv
+
+runtime! plugins/coc.vim

@@ -1,0 +1,8 @@
+{
+  "suggest.autoTrigger": "always",
+  "suggest.noselect": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.functionReturnTypes": false
+}
