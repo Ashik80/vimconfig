@@ -54,3 +54,5 @@ nmap <leader>fg :GREP<space>
 nmap <leader>fb :ls<CR>:b<space>
 vmap > >gv
 vmap < <gv
+
+runtime! plugins/yegappan_lsp.vim
