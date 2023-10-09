@@ -13,6 +13,7 @@ set nowrap
 set noswapfile
 set hidden
 set background=dark
+set wildmenu
 set wildoptions=pum
 set wildignorecase
 set backspace=indent,eol,start
