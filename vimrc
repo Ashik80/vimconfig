@@ -8,9 +8,11 @@ set tabstop=4 shiftwidth=4
 set autoindent smartindent
 set expandtab
 set foldlevel=99 foldmethod=indent
+set incsearch hlsearch
 set colorcolumn=80
 set nowrap
 set noswapfile
+set showcmd
 set hidden
 set background=dark
 set wildmenu
@@ -22,6 +24,8 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,preview
 set wildignore=**/node_modules/**,**/.git/**,**/__pycache__/**
 set laststatus=2
+
+colorscheme jellybeans
 
 if executable('rg')
     set grepprg=rg\ --no-heading\ --column\ -S
