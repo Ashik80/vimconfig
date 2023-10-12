@@ -1,1 +1,1 @@
-command! MakeTags execute 'term ctags -R .' | q
+command! MakeTags execute 'term ctags -R .' | bd!
