@@ -25,7 +25,7 @@ set completeopt=menuone,preview
 set wildignore=**/node_modules/**,**/.git/**,**/__pycache__/**
 set laststatus=2
 
-colorscheme jellybeans
+colorscheme catppuccin
 
 if executable('rg')
     set grepprg=rg\ --no-heading\ --column\ -S
