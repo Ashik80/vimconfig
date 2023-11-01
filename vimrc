@@ -57,5 +57,6 @@ nmap <leader>fa :e **/*
 nmap <leader>ff :call FuzzyFileSearch()<CR>
 nmap <leader>fg :GREP<space>
 nmap <leader>fb :ls<CR>:b<space>
+nmap <leader>n :noh<CR>
 vmap > >gv
 vmap < <gv
