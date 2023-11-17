@@ -50,3 +50,5 @@ nmap <leader>fl :ListFiles<CR>
 nmap <leader>n :noh<CR>
 vmap > >gv
 vmap < <gv
+
+runtime! plugins/plugins.vim
