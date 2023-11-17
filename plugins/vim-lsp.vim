@@ -3,6 +3,7 @@ let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server', 'es
 let g:lsp_settings_filetype_python = ['pylsp', 'pyright-langserver']
 
 let g:lsp_document_highlight_enabled = 0
+let g:lsp_document_code_action_signs_enabled = 0
 let g:lsp_diagnostics_virtual_text_align = 'after'
 let g:lsp_diagnostics_virtual_text_prefix = "   ‣ "
 let g:lsp_diagnostics_signs_error = {'text': 'E'}
@@ -23,6 +24,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> <leader>gd <plug>(lsp-definition)
     nmap <buffer> K <plug>(lsp-hover)
     nmap <buffer> <leader>ca <plug>(lsp-code-action)
+    nmap <buffer> <leader>e <plug>(lsp-document-diagnostics)
     nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
     nnoremap <buffer> <expr><c-b> lsp#scroll(-4)
 endfunction
