@@ -1,6 +1,7 @@
 let g:lsp_settings_filetype_typescript = ['typescript-language-server', 'eslint-language-server']
 let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server', 'eslint-language-server']
 let g:lsp_settings_filetype_python = ['pylsp', 'pyright-langserver']
+let g:lsp_settings_filetype_rust = ['rust-analyzer']
 
 let g:lsp_document_highlight_enabled = 0
 let g:lsp_document_code_action_signs_enabled = 0
