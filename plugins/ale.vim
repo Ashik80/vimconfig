@@ -20,8 +20,8 @@ let g:ale_typescriptreact_eslint_use_global = 1
 let g:ale_typescriptreact_eslint_executable = 'eslint_d'
 
 hi ALEError cterm=underline
-hi link ALEErrorSign ErrorMsg
-hi link ALEVirtualTextError ErrorMsg
+hi ALEErrorSign ctermfg=124 ctermbg=NONE
+hi ALEVirtualTextError ctermfg=124 ctermbg=NONE
 hi ALEWarning cterm=underline
-hi link ALEWarningSign WarningMsg
-hi link ALEVirtualTextWarning WarningMsg
+hi ALEWarningSign ctermfg=172 ctermbg=NONE
+hi ALEVirtualTextWarning ctermfg=172 ctermbg=NONE

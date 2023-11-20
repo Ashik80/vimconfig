@@ -14,8 +14,9 @@ let g:lsp_diagnostics_signs_hint = {'text': 'H'}
 
 hi link LspHintHighlight LineNr
 hi link LspHintText LineNr
+hi LspErrorText ctermfg=124 ctermbg=NONE
 hi LspErrorHighlight cterm=underline
-hi link LspWarningText WarningMsg
+hi LspWarningText ctermfg=172 ctermbg=NONE
 hi LspWarningHighlight cterm=underline
 
 function! s:on_lsp_buffer_enabled() abort
