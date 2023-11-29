@@ -1,3 +1,5 @@
+let g:lsp_settings_filetype_javascript = ['typescript-language-server', 'eslint-language-server']
+let g:lsp_settings_filetype_javascriptreact = ['typescript-language-server', 'eslint-language-server']
 let g:lsp_settings_filetype_typescript = ['typescript-language-server', 'eslint-language-server']
 let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server', 'eslint-language-server']
 let g:lsp_settings_filetype_python = ['pylsp', 'pyright-langserver']
