@@ -28,7 +28,7 @@ set wildignore=**/node_modules/**,**/.git/**,**/__pycache__/**
 set ruler
 set laststatus=2
 
-colorscheme catppuccin
+colorscheme wildcharm
 
 if executable('rg')
     set grepprg=rg\ --no-heading\ --column\ -S
