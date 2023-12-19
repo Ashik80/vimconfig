@@ -36,7 +36,7 @@ endif
 
 function! FuzzyFileSearch()
     let tempfile = tempname()
-    execute 'silent !rg --files | fzf | sed ''s/\(.*\)/\1:1:0/'' > '.l:tempfile
+    execute 'silent !rg --files | fzf | sed ''s/$/:1:0/'' > '.l:tempfile
     setlocal errorformat=%f:%l:%c
     execute 'cfile '.l:tempfile
     redraw!
