@@ -44,6 +44,12 @@ function! FuzzyFileSearch()
 endfunction
 
 command! -nargs=1 GREP silent grep! <args> | redraw! | cw
+command! ListFiles norm i!!find .
+            \ -type d -name plugged -prune -o
+            \ -type d -name __pycache__ -prune -o
+            \ -type d -name node_modules -prune -o
+            \ -type d -name .git -prune -o
+            \ -print \| sed 's/^/:e /'
 
 if has('macunix')
     vmap <leader>y :w !pbcopy<CR>
@@ -60,6 +66,7 @@ nmap <leader>fa :e **/*
 nmap <leader>ff :call FuzzyFileSearch()<CR>
 nmap <leader>fg :GREP<space>
 nmap <leader>fb :ls<CR>:b<space>
+nmap <leader>fl :ListFiles<CR>
 nmap <leader>n :noh<CR>
 vmap > >gv
 vmap < <gv
