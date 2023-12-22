@@ -49,7 +49,7 @@ command! ListFiles norm i!!find .
             \ -type d -name __pycache__ -prune -o
             \ -type d -name node_modules -prune -o
             \ -type d -name .git -prune -o
-            \ -print \| sed 's/^/:e /'
+            \ -print | sed 's/^/:e /'
 
 if has('macunix')
     vmap <leader>y :w !pbcopy<CR>
