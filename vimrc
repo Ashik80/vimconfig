@@ -27,6 +27,7 @@ set completeopt=menuone,preview
 set wildignore=**/node_modules/**,**/.git/**,**/__pycache__/**
 set ruler
 set laststatus=2
+set statusline=%f\ %m%r%=%l,%c%V\ \ \ \ \ %P
 
 colorscheme wildcharm
 
