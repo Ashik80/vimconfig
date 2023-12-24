@@ -1,6 +1,5 @@
 set tabstop=2
 set shiftwidth=2
-set colorcolumn=100
 
 command! MakeTags execute 'term ctags -R --exclude=node_modules .' | q
 command! EslintFixAll execute 'silent !eslint_d --fix %' | redraw! | e

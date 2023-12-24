@@ -11,7 +11,6 @@ set foldlevel=99 foldmethod=indent
 set incsearch hlsearch
 set ignorecase
 set smartcase
-set colorcolumn=80
 set nowrap
 set noswapfile
 set showcmd
@@ -25,7 +24,6 @@ set ttimeoutlen=0
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,preview
 set wildignore=**/node_modules/**,**/.git/**,**/__pycache__/**
-set ruler
 set laststatus=2
 set statusline=%f\ %m%r%=%l,%c%V\ \ \ \ \ %P
 
