@@ -20,6 +20,7 @@ hi LspErrorText ctermfg=124 ctermbg=NONE
 hi LspErrorHighlight cterm=underline
 hi LspWarningText ctermfg=172 ctermbg=NONE
 hi LspWarningHighlight cterm=underline
+hi SignColumn ctermbg=NONE
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
