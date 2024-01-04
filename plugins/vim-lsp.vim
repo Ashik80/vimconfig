@@ -2,7 +2,7 @@ let g:lsp_settings_filetype_javascript = ['typescript-language-server', 'eslint-
 let g:lsp_settings_filetype_javascriptreact = ['typescript-language-server', 'eslint-language-server']
 let g:lsp_settings_filetype_typescript = ['typescript-language-server', 'eslint-language-server']
 let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server', 'eslint-language-server']
-let g:lsp_settings_filetype_python = ['pylsp', 'pyright-langserver']
+let g:lsp_settings_filetype_python = ['pylsp-all', 'pyright-langserver']
 let g:lsp_settings_filetype_rust = ['rust-analyzer']
 
 let g:lsp_document_highlight_enabled = 0
