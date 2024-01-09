@@ -34,6 +34,8 @@ function! s:on_lsp_buffer_enabled() abort
     nnoremap <buffer> <expr><c-b> lsp#scroll(-4)
 endfunction
 
+nmap <leader>lx :LspStopServer<space>
+
 augroup lsp_install
     au!
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
