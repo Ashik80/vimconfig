@@ -43,7 +43,7 @@ else
     nmap <leader>cp :r !xsel -b<CR>
 endif
 
-nmap <leader>yf :let @f = expand("%")<CR>
+nmap <leader>yf :let @f = expand("%:.")<CR>
 nmap <leader>fg :GREP<space>
 nmap <leader>fb :ls<CR>:b<space>
 nmap <leader>fl :ListFiles<CR>
