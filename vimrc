@@ -27,11 +27,8 @@ set grepprg=grep\ -Rin\ --exclude-dir={__pycache__,node_modules,.git}\ $*
 
 command! -nargs=1 GREP silent grep! <args> | redraw! | cw
 command! ListFiles norm i!!find .
-            \ -type d -name plugged -prune -o
-            \ -type d -name __pycache__ -prune -o
-            \ -type d -name node_modules -prune -o
-            \ -type d -name .git -prune -o
-            \ -print | sed 's/^/:e /'
+            \ -type d \( -name plugged -o -name __pycache__ -o -name node_modules -o -name .git \)
+            \ -prune -o -type f -print | sed 's/^/:e /'
 
 if has('macunix')
     vmap <leader>y :w !pbcopy<CR>
