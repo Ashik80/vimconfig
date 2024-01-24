@@ -43,6 +43,11 @@ if executable("fzf")
     nmap <leader>ff :call FuzzyFind()<CR>
 endif
 
+function! GitBlameNextTwentyLines()
+    let l:linenumber = line(".")
+    execute '!git blame -L ' . l:linenumber . ',+20 %'
+endfunction
+
 if has('macunix')
     vmap <leader>y :w !pbcopy<CR>
     vmap <leader>cp :r !pbpaste<CR>
@@ -57,6 +62,7 @@ nmap <leader>yf :let @f = expand("%:.")<CR>
 nmap <leader>fg :GREP<space>
 nmap <leader>fb :ls<CR>:b<space>
 nmap <leader>fl :ListFiles<CR>
+nmap <leader>gb :call GitBlameNextTwentyLines()<CR>
 nmap <leader>n :noh<CR>
 vmap > >gv
 vmap < <gv
