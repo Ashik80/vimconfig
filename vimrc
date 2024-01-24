@@ -30,6 +30,19 @@ command! ListFiles norm i!!find .
             \ -type d \( -name plugged -o -name __pycache__ -o -name node_modules -o -name .git \)
             \ -prune -o -type f -print | sed 's/^/:e /'
 
+if executable("fzf")
+    function! FuzzyFind()
+        execute 'silent !find .
+                    \ -type d \( -name node_modules -o
+                    \ -name .git -o
+                    \ -name __pycache__ \) -prune -o -type f -print | fzf | sed ''s/$/:1:0/'' > ~/temp'
+        execute "cfile ~/temp"
+        redraw!
+    endfunction
+
+    nmap <leader>ff :call FuzzyFind()<CR>
+endif
+
 if has('macunix')
     vmap <leader>y :w !pbcopy<CR>
     vmap <leader>cp :r !pbpaste<CR>
