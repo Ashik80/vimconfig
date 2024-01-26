@@ -20,8 +20,7 @@ set completeopt=menuone,preview
 set laststatus=2
 set statusline=%f\ %m%r%=%l,%c%V\ \ \ \ \ %P
 
-hi Pmenu ctermfg=7 ctermbg=0
-hi PmenuSel ctermfg=0 ctermbg=11
+colorscheme jellybeans
 
 set grepprg=grep\ -Rin\ --exclude-dir={__pycache__,node_modules,.git}\ $*
 
@@ -33,9 +32,8 @@ command! ListFiles norm i!!find .
 if executable("fzf")
     function! FuzzyFind()
         execute 'silent !find .
-                    \ -type d \( -name node_modules -o
-                    \ -name .git -o
-                    \ -name __pycache__ \) -prune -o -type f -print | fzf | sed ''s/$/:1:0/'' > ~/temp'
+                    \ -type d \( -name node_modules -o -name .git -o -name __pycache__ \)
+                    \ -prune -o -type f -print | fzf | sed ''s/$/:1:0/'' > ~/temp'
         execute "cfile ~/temp"
         redraw!
     endfunction
