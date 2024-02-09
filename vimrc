@@ -21,8 +21,6 @@ set laststatus=2
 set statusline=%f\ %m%r%=%l,%c%V\ \ \ \ \ %P
 set clipboard=unnamedplus
 
-colorscheme jellybeans
-
 set grepprg=grep\ -Rin\ --exclude-dir={__pycache__,node_modules,.git,dist}\ $*
 
 command! -nargs=1 GREP silent grep! <args> | redraw! | cw
@@ -69,3 +67,5 @@ nmap <leader>gb :call GitBlameNextTwentyLines()<CR>
 nmap <leader>n :noh<CR>
 vmap > >gv
 vmap < <gv
+
+runtime! plugins/plugins.vim
