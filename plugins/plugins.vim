@@ -5,6 +5,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'dense-analysis/ale'
 Plug 'ap/vim-css-color'
+Plug 'sheerun/vim-polyglot'
 
 if has('lua')
     Plug 'prabirshrestha/asyncomplete.vim'
