@@ -19,6 +19,7 @@ set ttimeoutlen=0
 set completeopt=menuone,preview
 set laststatus=2
 set statusline=%f\ %m%r%=%l,%c%V\ \ \ \ \ %P
+set clipboard=unnamedplus
 
 colorscheme jellybeans
 
@@ -46,14 +47,18 @@ function! GitBlameNextTwentyLines()
     execute '!git blame -L ' . l:linenumber . ',+20 %'
 endfunction
 
-if has('macunix')
-    vmap <leader>y :w !pbcopy<CR>
-    vmap <leader>cp :r !pbpaste<CR>
-    nmap <leader>cp :r !pbpaste<CR>
+if has('clipboard')
+    vmap <leader>y "+y
+    vmap <leader>cp "+p
+    nmap <leader>cp "+p
 else
-    vmap <leader>y :w !xsel -b<CR>
-    vmap <leader>cp :r !xsel -b<CR>
-    nmap <leader>cp :r !xsel -b<CR>
+    if has('macunix')
+        vmap <leader>y :w !pbcopy<CR>
+        nmap <leader>cp :r !pbpaste<CR>
+    else
+        vmap <leader>y :w !xsel -b<CR>
+        nmap <leader>cp :r !xsel -b<CR>
+    endif
 endif
 
 nmap <leader>yf :let @f = expand("%:.")<CR>
