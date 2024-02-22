@@ -19,7 +19,6 @@ set ttimeoutlen=0
 set completeopt=menuone,preview
 set laststatus=2
 set statusline=%f\ %m%r%=%l,%c%V\ \ \ \ \ %P
-set clipboard^=unnamed,unnamedplus
 
 set grepprg=grep\ -Rin\ --exclude-dir={__pycache__,node_modules,.git,dist}\ $*
 
