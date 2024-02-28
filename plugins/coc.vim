@@ -13,3 +13,5 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+
+set tagfunc=CocTagFunc
