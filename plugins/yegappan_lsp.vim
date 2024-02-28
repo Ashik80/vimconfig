@@ -1,26 +1,15 @@
-packadd lsp
-
-call LspAddServer([#{
+let lsp_servers = [#{
             \ name: 'typescriptlang',
             \ filetype: ['javascript', 'typescript', 'javascriptreact', 'typescriptreact'],
             \ path: 'typescript-language-server',
             \ args: ['--stdio'],
-            \ }])
-
-call LspAddServer([#{
+            \ },
+            \ #{
             \ name: 'pylsp',
             \ filetype: ['python'],
             \ path: 'pylsp',
-            \ }])
-
-call LspAddServer([#{
-            \ name: 'vscode-eslint-server',
-            \ filetype: ['javascript', 'typescript', 'javascriptreact', 'typescriptreact'],
-            \ path: 'vscode-eslint-language-server',
-            \ args: ['--stdio'],
-            \ }])
-
-call LspAddServer([#{
+            \ },
+            \ #{
             \ name: 'pyright',
             \ filetype: ['python'],
             \ path: 'pyright-langserver',
@@ -28,8 +17,10 @@ call LspAddServer([#{
             \ workspaceConfig: #{
             \   python: #{
             \     pythonPath: 'python'
-            \ }}
-            \ }])
+            \   }
+            \ }}]
+
+autocmd User LspSetup call LspAddServer(lsp_servers)
 
 let lsp_options = #{
       \ diagVirtualTextAlign: 'after',
@@ -40,7 +31,7 @@ let lsp_options = #{
       \ showDiagInBalloon: v:true,
       \}
 
-call LspOptionsSet(lsp_options)
+autocmd User LspSetup call LspOptionsSet(lsp_options)
 
 hi SignColumn ctermbg=NONE
 hi LspDiagInlineWarning ctermbg=NONE term=underline cterm=underline
