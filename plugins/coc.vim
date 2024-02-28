@@ -14,4 +14,5 @@ function! ShowDocumentation()
   endif
 endfunction
 
-set tagfunc=CocTagFunc
+if exists('+tagfunc') | set tagfunc=CocTagFunc | endif
+set signcolumn=yes
