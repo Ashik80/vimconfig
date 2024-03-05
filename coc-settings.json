@@ -9,5 +9,6 @@
       "command": "csharp-ls",
       "filetypes": ["cs"]
     }
-  }
+  },
+  "rust-analyzer.cargo.features": "all"
 }
