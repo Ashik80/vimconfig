@@ -34,6 +34,7 @@ if executable("fzf")
         execute 'silent !find .
                     \ -type d \( -name node_modules -o -name .git -o -name __pycache__ -o -name dist \)
                     \ -prune -o -type f -print | fzf | sed ''s/$/:1:0/'' > ~/temp'
+        set efm=%f:%l:%c
         execute "cfile ~/temp"
         redraw!
     endfunction
