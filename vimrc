@@ -22,17 +22,27 @@ set completeopt=menuone,preview
 set laststatus=2
 set statusline=%f\ %m%r%=%l,%c%V\ \ \ \ \ %P
 
-set grepprg=grep\ -Rin\ --exclude-dir={__pycache__,node_modules,.git,dist}\ $*
+set grepprg=grep\ -Rin\ --exclude-dir={plugged,__pycache__,node_modules,.git,dist,target}\ $*
 
 command! -nargs=1 GREP silent grep! <args> | redraw! | cw
 command! ListFiles norm i!!find .
-            \ -type d \( -name plugged -o -name __pycache__ -o -name node_modules -o -name .git -o -name dist \)
+            \ -type d \( -name plugged
+            \ -o -name __pycache__
+            \ -o -name node_modules
+            \ -o -name .git
+            \ -o -name dist
+            \ -o -name target \)
             \ -prune -o -type f -print | sed 's/^/:e /'
 
 if executable("fzf")
     function! FuzzyFind()
         execute 'silent !find .
-                    \ -type d \( -name node_modules -o -name .git -o -name __pycache__ -o -name dist \)
+                    \ -type d \( -name plugged
+                    \ -o -name node_modules
+                    \ -o -name .git
+                    \ -o -name __pycache__
+                    \ -o -name dist
+                    \ -o -name target \)
                     \ -prune -o -type f -print | fzf | sed ''s/$/:1:0/'' > ~/temp'
         set efm=%f:%l:%c
         execute "cfile ~/temp"
