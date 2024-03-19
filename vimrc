@@ -20,6 +20,7 @@ set backspace=indent,eol,start
 set ttimeoutlen=0
 set completeopt=menuone,preview
 set laststatus=2
+set mouse=nvi
 set statusline=%f\ %m%r%=%l,%c%V\ \ \ \ \ %P
 
 set grepprg=grep\ -Rin\ --exclude-dir={plugged,__pycache__,node_modules,.git,dist,target}\ $*
