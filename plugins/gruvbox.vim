@@ -1,3 +1,5 @@
+let g:gruvbox_contrast_dark = "hard"
+
 colorscheme gruvbox
 
 hi Search ctermbg=242 ctermfg=214 cterm=bold
