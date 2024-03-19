@@ -34,6 +34,13 @@ command! ListFiles norm i!!find .
             \ -o -name dist
             \ -o -name target \)
             \ -prune -o -type f -print | sed 's/^/:e /'
+command! Inspect call GetSyntaxGroup()
+
+function! GetSyntaxGroup()
+    let l:s = synID(line("."), col("."), 1)
+    echo "Syntax group: ".synIDattr(l:s, 'name')
+    echo "Highlight group: ".synIDattr(synIDtrans(l:s), 'name')
+endfunction
 
 if executable("fzf")
     function! FuzzyFind()
