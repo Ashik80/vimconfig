@@ -8,3 +8,5 @@ hi MatchParen ctermbg=NONE ctermfg=175 cterm=bold
 hi link Function GruvboxYellow
 hi link pythonDottedName GruvboxAqua
 hi link pythonFunction GruvboxYellow
+hi link jsxAttrib GruvboxOrange
+hi link tsxAttrib GruvboxOrange
